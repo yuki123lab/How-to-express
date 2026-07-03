@@ -18,8 +18,8 @@ GitHub Pages 有两种地址：
 
 | 仓库类型 | 示例仓库名 | 部署后网址 | 适用场景 |
 |---|---|---|---|
-| 项目页 | `how-to-express` | `https://你的用户名.github.io/how-to-express/` | 推荐，一般项目都用这个 |
-| 用户页 | `你的用户名.github.io` | `https://你的用户名.github.io/` | 个人主页专用 |
+| 项目页 | `How-to-express` | `https://yuki123lab.github.io/How-to-express/` | 推荐，一般项目都用这个 |
+| 用户页 | `yuki123lab.github.io` | `https://yuki123lab.github.io/` | 个人主页专用 |
 
 **本文档默认按“项目页”方式说明。**
 
@@ -41,12 +41,10 @@ base: './',
 base: '/YOUR_REPO_NAME/',
 ```
 
-其中 `YOUR_REPO_NAME` 换成你的真实仓库名。
-
-**示例**：如果你的仓库名是 `how-to-express`，就写成：
+本项目的仓库名为 `How-to-express`，所以当前已配置为：
 
 ```ts
-base: '/how-to-express/',
+base: '/How-to-express/',
 ```
 
 如果是用户页仓库（仓库名等于 `用户名.github.io`），则写成：
@@ -98,24 +96,30 @@ base: '/',
 
 ### 3.2 把代码推送到仓库
 
-在项目根目录打开命令行，依次执行：
+如果仓库已经创建好，在项目根目录打开命令行，依次执行：
+
+```bash
+git add .
+git commit -m "update: 你的更新说明"
+git push origin main
+```
+
+如果是全新仓库，执行：
 
 ```bash
 git init
 git add .
 git commit -m "init: pwa teleprompter"
 git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+git remote add origin https://github.com/yuki123lab/How-to-express.git
 git push -u origin main
 ```
-
-把 `YOUR_USERNAME` 和 `YOUR_REPO_NAME` 换成你的真实用户名和仓库名。
 
 ---
 
 ## 四、开启 GitHub Pages
 
-1. 打开仓库页面：`https://github.com/YOUR_USERNAME/YOUR_REPO_NAME`
+1. 打开仓库页面：`https://github.com/yuki123lab/How-to-express`
 2. 点击上方 **Settings** 标签
 3. 左侧菜单找到 **Pages**（在 Code and automation 下面）
 4. 在 **Build and deployment** 区域：
@@ -133,7 +137,7 @@ git push -u origin main
 4. 完成后，访问：
 
 ```
-https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/
+https://yuki123lab.github.io/How-to-express/
 ```
 
 ---
