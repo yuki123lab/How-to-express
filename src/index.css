@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #0A0A0C;
+    --bg-surface: #141418;
+    --bg-panel: #1C1C22;
+    --text-primary: #F0F0F2;
+    --text-secondary: #8E8E96;
+    --accent: #D4A853;
+    --accent-soft: rgba(212, 168, 83, 0.15);
+    --border-color: rgba(240, 240, 242, 0.06);
+
+    --font-body: 'Noto Sans SC', 'PingFang SC', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-teleprompter: 'Noto Sans SC', 'PingFang SC', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --radius: 0.625rem;
+  }
+
+  * {
+    @apply border-border;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    overflow: hidden;
+  }
+
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 4px;
+    background: var(--bg-panel);
+    border-radius: 4px;
+    outline: none;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: var(--accent);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: var(--accent);
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+  }
+}
+
+@layer components {
+  .teleprompter-container {
+    background-color: var(--bg-primary);
+    min-height: 100vh;
+  }
+
+  .teleprompter-text {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--text-primary);
+    line-height: 1.6;
+    font-family: var(--font-teleprompter);
+    letter-spacing: -0.02em;
+    padding: 0 24px;
+  }
+
+  .teleprompter-text p {
+    margin-bottom: 1.5em;
+  }
+
+  .teleprompter-text p:last-child {
+    margin-bottom: 0;
+  }
+
+  .floating-controls {
+    background: rgba(20, 20, 24, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 12px;
+    padding: 12px 24px;
+    transition: opacity 0.3s ease;
+  }
+}
