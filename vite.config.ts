@@ -5,7 +5,7 @@ import { VitePWA } from "vite-plugin-pwa"
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/How-to-express/',
+  base: process.env.GITHUB_PAGES === 'true' ? '/How-to-express/' : './',
   plugins: [
     react(),
     VitePWA({
